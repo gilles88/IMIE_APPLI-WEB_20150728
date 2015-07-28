@@ -3,6 +3,8 @@
     include 'mvc/model/User_manager.class.php';
     session_start(); 
 
+
+
     $data_user = array(
         array("nom"=>"Ryan", "prenom"=>"Schneider","email"=>"et.tristique@sociisnatoque.co.uk","password"=>"Nunc"),
         array("nom"=>"Brock", "prenom"=>"Burton","email"=>"Nam.ligula@et.com","password"=>"feugiat."),
@@ -16,15 +18,29 @@
         array("nom"=>"Raja", "prenom"=>"Walter","email"=>"Proin.ultrices@cursus.com","password"=>"felis")
     );
 
+    // Génération d'objets user
     $users = array();
     $manager = new User_manager($users);
     for ($i=0; $i < count($data_user) ; $i++) { 
         $user = new User($data_user[$i]["prenom"],$data_user[$i]["nom"],$data_user[$i]["email"],$data_user[$i]["password"], 0);
         $users = $manager->add_user($user);
     }
-    
+
+    // Init varaibles de session    
     $_SESSION['users'] = $users;
     $_SESSION['session_user'] = false;
+
+
+    //Authentification
+    if (isset($_POST) && !empty($_POST)) {
+        extract($_POST);
+        $bool = $manager->auth_user($email, $pass);     
+        if($bool){
+            $_SESSION['session_user'] = true;               
+        }else{
+            $_SESSION['session_user'] = false;
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -40,7 +56,7 @@
     <div class="site">
         <?php             
             $session_user = $_SESSION['session_user'];
-            if (isset($session_user) && $session_user) {                
+            if (isset($session_user) && !empty($session_user)) {                
                 include("mvc/vue/includes/accueil.php");
             }else{
                 include("mvc/vue/includes/form_auth.php");
