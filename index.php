@@ -28,15 +28,14 @@
 
     // Init varaibles de session    
     $_SESSION['users'] = $users;
-    $_SESSION['session_user'] = false;
 
 
     //Authentification
     if (isset($_POST) && !empty($_POST)) {
         extract($_POST);
-        $bool = $manager->auth_user($email, $pass);     
-        if($bool){
-            $_SESSION['session_user'] = true;               
+        $utilsateur_connecte = $manager->auth_user($email, $pass);     
+        if(isset($utilsateur_connecte) && ($utilsateur_connecte->get_statut())) {
+            $_SESSION['session_user'] = $utilsateur_connecte;               
         }else{
             $_SESSION['session_user'] = false;
         }
