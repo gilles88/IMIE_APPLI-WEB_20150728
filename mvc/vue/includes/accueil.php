@@ -3,7 +3,7 @@
     <a href="#" data-target="">Camions</a>
     <a href="#" data-target="">Missions</a>
     <span class="user_connect"><?php echo $_SESSION['session_user']->get_prenom()." ".$_SESSION['session_user']->get_nom() ?></span>
-    <span class="nb_connect">24</span>
+    <span class="nb_connect"><?php echo $manager->get_nb_user_online(); ?></span>
 </nav>
 
 <div class="content">

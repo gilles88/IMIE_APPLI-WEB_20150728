@@ -7,13 +7,22 @@ Class User_manager{
 		$this->users = $users;
 	}
 	
+    public function get_users(){
+        return $this->users;
+    }
+	
+    public function set_users($pUsers){
+        $this->users = $pUsers;
+    }
+    
 	function get_nb_user_online(){
 		// return array
 		$online_users = array();
+        $i = 0;
 		foreach ($this->users as $row) {
-			if ($row->get_statut) $online_users[] = $row;			
+			if ($row->get_statut()){ $i++;}		
 		}
-		return $online_users;
+		return $i;
 	}
 
 	function search_user($nom="", $prenom=""){
