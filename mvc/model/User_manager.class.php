@@ -29,11 +29,13 @@ Class User_manager{
 		return $result;
 	}
 
+
 	function auth_user($email="", $pass=""){		
 		foreach ($this->users as $row) {			
 			if ($row->get_mail() == $email && $row->get_password() == $pass) {
 				$row->set_statut(true); 
 				return true;
+
 			}
 		}
 		return false;

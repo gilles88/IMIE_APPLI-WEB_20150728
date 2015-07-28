@@ -56,6 +56,7 @@
     <div class="site">
         <?php             
             $session_user = $_SESSION['session_user'];
+
             if (isset($session_user) && !empty($session_user)) {                
                 include("mvc/vue/includes/accueil.php");
             }else{
