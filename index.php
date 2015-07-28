@@ -5,12 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gilles - Öner [IMIE-APPLI WEB]</title>
-    <link href="/mvc/vue/css/bootstrap.min.css" rel="stylesheet">
+    <link href="mvc/vue/css/bootstrap.min.css" rel="stylesheet">
+    <link href="mvc/vue/css/style.css" rel="stylesheet">
 </head>
 <body>
-    
+    <div class="site">
+        <nav>
+            <a href="#" data-target="">Utilisateur</a>
+            <a href="#" data-target="">Camions</a>
+            <a href="#" data-target="">Missions</a>
+            <span class="user_connect">Gilles Montmirel</span>
+            <span class="nb_connect">24</span>
+        </nav>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="/mvc/vue/js/bootstrap.min.js"></script>
+        <div class="content">
+            
+            <div class="head">
+                <div class="search">
+                    <div class="search_form">
+                        <form action="">
+                            <input type="text" class="form-control" placeholder="prénom" name="prenom">
+                            <input type="text" class="form-control" placeholder="nom" name="nom">
+                            <button class="btn btn-primary">Rechercher</button>
+                        </form>
+                    </div>
+                    <a href="#">Add chauffeur</a>
+                    <a href="#">Add gestionnaire</a>                    
+                </div>
+            </div>
+
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Amet ab aliquid, cupiditate veritatis dolorum earum! Natus, aut. 
+            Hic qui illum rem, iste mollitia, ea assumenda, necessitatibus rerum 
+            labore odit neque.
+        </div>
+    </div>
+
+    <script src="mvc/vue/js/jquery.js"></script>
+    <script src="mvc/vue/js/bootstrap.min.js"></script>
 </body>
 </html>
