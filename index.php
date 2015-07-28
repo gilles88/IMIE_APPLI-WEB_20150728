@@ -25,10 +25,7 @@
         $user = new User($data_user[$i]["prenom"],$data_user[$i]["nom"],$data_user[$i]["email"],$data_user[$i]["password"], 0);
         $users = $manager->add_user($user);
     }
-
-    // Init varaibles de session    
-    $_SESSION['users'] = $users;
-
+  
 
     //Authentification
     if (isset($_POST) && !empty($_POST)) {
