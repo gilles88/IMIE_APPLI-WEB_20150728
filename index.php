@@ -34,14 +34,28 @@
                 </div>
             </div>
 
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Amet ab aliquid, cupiditate veritatis dolorum earum! Natus, aut. 
-            Hic qui illum rem, iste mollitia, ea assumenda, necessitatibus rerum 
-            labore odit neque.
+            
         </div>
+    </div>
+
+    <div class="content-user none">
+        content user
+    </div>
+
+    <div class="content-camion none">
+        content camion
+    </div>
+    
+    <div class="content-mission none">
+        content camion
     </div>
 
     <script src="mvc/vue/js/jquery.js"></script>
     <script src="mvc/vue/js/bootstrap.min.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            
+        });
+    </script>
 </body>
 </html>
