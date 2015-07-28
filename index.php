@@ -4,9 +4,7 @@
     include 'mvc/controller/Gestionnaire.class.php';
     include 'mvc/model/User_manager.class.php';
     session_start(); 
-
-
-
+    
     $data_user = array(
         array("nom"=>"Ryan", "prenom"=>"Schneider","email"=>"et.tristique@sociisnatoque.co.uk","password"=>"Nunc"),
         array("nom"=>"Ryan", "prenom"=>"Burton","email"=>"Nam.ligula@et.com","password"=>"feugiat."),

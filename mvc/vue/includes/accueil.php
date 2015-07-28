@@ -27,37 +27,39 @@
             if (isset($_GET) && !empty($_GET)) {
                 extract($_GET);
                 $users_found = $manager->search_user($nom, $prenom);
-            }
-            if (isset($users_found) && count($users_found)) { ?>
-                <table>
-                    <tr>
-                        <td>Nom</td>
-                        <td>Prénom</td>
-                        <td>Mail</td>
-                        <td>Métier</td>
-                        <td>Actions</td>
-                    </tr>
-                    <?php 
-                    for ($i=0; $i < count($users_found); $i++) {
-                        $row = $users_found[$i]; ?>
+            
+                if (count($users_found)) { ?>
+                    <table class="table">
                         <tr>
-                            <td><?php print $row->get_nom(); ?></td>
-                            <td><?php print $row->get_prenom(); ?></td>
-                            <td><?php print $row->get_mail(); ?></td>
-                            <td>
-                                <?php print get_class($row); ?>
-                            </td>
-                            <td>
-                                <button>Edit</button>
-                                <button>Suppr</button>
-                            </td>
+                            <td><strong>Nom</strong></td>
+                            <td><strong>Prénom</strong></td>
+                            <td><strong>Mail</strong></td>
+                            <td><strong>Métier</strong></td>
+                            <td><strong>Actions</strong></td>
                         </tr>
                         <?php 
-                    }
-                     ?>
-                </table>
-            <?php }
-         ?>                    
+                        for ($i=0; $i < count($users_found); $i++) {
+                            $row = $users_found[$i]; ?>
+                            <tr>
+                                <td><?php print $row->get_nom(); ?></td>
+                                <td><?php print $row->get_prenom(); ?></td>
+                                <td><?php print $row->get_mail(); ?></td>
+                                <td>
+                                    <?php print get_class($row); ?>
+                                </td>
+                                <td>
+                                    <button class="btn">Edit</button>
+                                    <button class="btn">Suppr</button>
+                                </td>
+                            </tr>
+                            <?php 
+                        }
+                         ?>
+                    </table>
+                <?php 
+                }
+            }
+            ?>                    
     </div>
 </div>
 
