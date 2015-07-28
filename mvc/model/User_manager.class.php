@@ -29,16 +29,9 @@ Class User_manager{
 		//retourne tableau de resultat
 		$result = array();
 		foreach ($this->users as $row) {
-			if ($row->get_nom() == $nom  || $row->get_prenom() == $prenom){
-				// print "ok"; die();
+			if ($row->get_nom() == $nom  || $row->get_prenom() == $prenom){		
 				$result[] = $row;
 			}
-			// if ($row->get_nom() == $nom ||
-			// 		$row->get_prenom() == $prenom ||
-			// 		($row->get_nom() == $nom && $row->get_prenom() == $prenom)) {
-			// 	print "ok"; die();
-			// 	$result[] = $row;
-			// }			
 		}
 		return $result;
 	}
@@ -49,10 +42,9 @@ Class User_manager{
 			if ($row->get_mail() == $email && $row->get_password() == $pass) {
 				$row->set_statut(true); 
 				return $row;
-
 			}
 		}
-		return false;
+		return null;
 	}
 
 	function delete_user($user){

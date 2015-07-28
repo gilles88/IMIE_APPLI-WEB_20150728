@@ -4,7 +4,7 @@
     include 'mvc/controller/Gestionnaire.class.php';
     include 'mvc/model/User_manager.class.php';
     session_start(); 
-    
+
     $data_user = array(
         array("nom"=>"Ryan", "prenom"=>"Schneider","email"=>"et.tristique@sociisnatoque.co.uk","password"=>"Nunc"),
         array("nom"=>"Ryan", "prenom"=>"Burton","email"=>"Nam.ligula@et.com","password"=>"feugiat."),
@@ -56,9 +56,7 @@
 <body>
     <div class="site">
         <?php             
-            $session_user = $_SESSION['session_user'];
-
-            if (isset($session_user) && !empty($session_user)) {                
+            if (isset($_SESSION['session_user']) && !empty($_SESSION['session_user'])) {                
                 include("mvc/vue/includes/accueil.php");
             }else{
                 include("mvc/vue/includes/form_auth.php");
