@@ -1,11 +1,14 @@
-<form>
-    <div class="form-group">
-        <label for="inputEmail">Email</label>
-        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-    </div>
-    <div class="form-group">
-        <label for="inputPassword">Mot de passe</label>
-        <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-    </div>
-    <button type="submit" class="btn btn-primary">Se connecter</button>
-</form>
+<div id="fullscreen_bg" class="fullscreen_bg"/>
+
+<div class="container">
+
+	<form class="form-signin">
+		<h1 class="form-signin-heading text-muted">Se connecter</h1>
+		<input type="text" class="form-control" placeholder="Email address" required="" autofocus="">
+		<input type="password" class="form-control" placeholder="Password" required="">
+		<button class="btn btn-lg btn-primary btn-block" type="submit">
+			Se connecter
+		</button>
+	</form>
+
+</div>
