@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gilles - Öner [IMIE-APPLI WEB]</title>
     <link href="mvc/vue/css/bootstrap.min.css" rel="stylesheet">
+<<<<<<< Updated upstream
     <link href="mvc/vue/css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -42,6 +43,29 @@
     </div>
 
     <script src="mvc/vue/js/jquery.js"></script>
+=======
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+            <li class="active"> <a href="#">Utilisateurs</a> </li>
+            <li> <a href="#">Camions</a> </li>
+            <li> <a href="#">Missions</a> </li>
+            <li> <a>Gilles Montmirel</a> </li>
+          </ul>
+            
+          <form class="navbar-form navbar-right inline-form">
+            <div class="form-group">
+              <input type="search" class="input-sm form-control" placeholder="Recherche">
+              <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Chercher</button>
+            </div>
+          </form>
+        </div>
+      </nav>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+>>>>>>> Stashed changes
     <script src="mvc/vue/js/bootstrap.min.js"></script>
 </body>
 </html>
