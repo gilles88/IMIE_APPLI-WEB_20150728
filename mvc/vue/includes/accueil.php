@@ -28,7 +28,7 @@
                 extract($_GET);
                 $users_found = $manager->search_user($nom, $prenom);
             }
-            if (count($users_found)) { ?>
+            if (isset($users_found) && count($users_found)) { ?>
                 <table>
                     <tr>
                         <td>Nom</td>

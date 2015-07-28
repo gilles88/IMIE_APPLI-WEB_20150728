@@ -1,5 +1,7 @@
 <?php 
     include 'mvc/controller/User.class.php';
+    include 'mvc/controller/Chauffeur.class.php';
+    include 'mvc/controller/Gestionnaire.class.php';
     include 'mvc/model/User_manager.class.php';
     session_start(); 
 
@@ -21,11 +23,16 @@
     // Génération d'objets user
     $users = array();
     $manager = new User_manager($users);
-    for ($i=0; $i < count($data_user) ; $i++) { 
-        $user = new User($data_user[$i]["prenom"],$data_user[$i]["nom"],$data_user[$i]["email"],$data_user[$i]["password"], 0);
+    for ($i=0; $i < 8 ; $i++) { 
+        $user = new Chauffeur($data_user[$i]["prenom"],$data_user[$i]["nom"],$data_user[$i]["email"],$data_user[$i]["password"], 0);
         $users = $manager->add_user($user);
     }
-  
+
+    for ($i=8; $i < 10 ; $i++) { 
+        $user = new Gestionnaire($data_user[$i]["prenom"],$data_user[$i]["nom"],$data_user[$i]["email"],$data_user[$i]["password"], 0);
+        $users = $manager->add_user($user);
+    }
+
 
     //Authentification
     if (isset($_POST) && !empty($_POST)) {
