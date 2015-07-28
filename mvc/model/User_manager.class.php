@@ -29,6 +29,25 @@ Class User_manager{
 		return $result;
 	}
 
+	function set_user_online($mail){
+		foreach ($this->users as $row) {
+			if ($row->get_mail() == $mail){
+				$row->set_statut = true;
+			}
+		}
+		return null;		
+	}
+
+
+	function auth_user($email="", $pass=""){		
+		foreach ($this->users as $row) {
+			if ($row->get_mail() == $email && $row->get_password() == $pass) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 	function delete_user($user){
 		/*
 		params : mail
