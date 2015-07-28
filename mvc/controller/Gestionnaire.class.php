@@ -19,6 +19,12 @@ class Gestionnaire extends User {
     }
     
     private function delChauffeur($pChauffeur){
-        array_pop($this->lesChauffeurs,$pChauffeur);
+        foreach($this->lesChauffeurs as $key => $leChauffeur){
+            if($leChauffeur->get_email() == $pChauffeur->get_email()){
+                unset($this->lesChauffeurs[$key]);
+                return true;
+            }
+        }
+        return false;
     }
 }
