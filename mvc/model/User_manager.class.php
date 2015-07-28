@@ -34,7 +34,7 @@ Class User_manager{
 		foreach ($this->users as $row) {			
 			if ($row->get_mail() == $email && $row->get_password() == $pass) {
 				$row->set_statut(true); 
-				return true;
+				return $row;
 
 			}
 		}
