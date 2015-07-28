@@ -2,7 +2,7 @@
     <a href="#" data-target="">Utilisateur</a>
     <a href="#" data-target="">Camions</a>
     <a href="#" data-target="">Missions</a>
-    <span class="user_connect"><?php echo $utilsateur_connecte->getPrenom()." ".$utilsateur_connecte->getNom() ?></span>
+    <span class="user_connect"><?php echo $_SESSION['session_user']->get_prenom()." ".$_SESSION['session_user']->get_nom() ?></span>
     <span class="nb_connect">24</span>
 </nav>
 
