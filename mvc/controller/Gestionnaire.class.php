@@ -2,7 +2,7 @@
 class Gestionnaire extends User {
     private $lesChauffeurs;
     
-    public function gestionnaire($pPrenom,$pNom,$pMail,$pPassword,$pStatut,){
+    public function gestionnaire($pPrenom,$pNom,$pMail,$pPassword,$pStatut){
         parent::user($pPrenom,$pNom,$pMail,$pPassword,$pStatut);
         $this->lesChauffeurs = array();
     }
