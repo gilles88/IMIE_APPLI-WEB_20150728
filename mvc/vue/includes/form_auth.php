@@ -1,14 +1,15 @@
-<div id="fullscreen_bg" class="fullscreen_bg"/>
+<form class="form-signin" method="POST">
+	<h1 class="form-signin-heading text-muted">Se connecter</h1>
+	<input type="text" class="form-control" name="email" placeholder="Email" required="" autofocus="">
+	<input type="password" class="form-control" name="pass" placeholder="Mot de passe" required="">
+	<button class="btn btn-lg btn-primary btn-block" type="submit">
+		Se connecter
+	</button>
+</form>
 
-<div class="container">
-
-	<form class="form-signin">
-		<h1 class="form-signin-heading text-muted">Se connecter</h1>
-		<input type="text" class="form-control" placeholder="Email" required="" autofocus="">
-		<input type="password" class="form-control" placeholder="Mot de passe" required="">
-		<button class="btn btn-lg btn-primary btn-block" type="submit">
-			Se connecter
-		</button>
-	</form>
-
-</div>
+<?php 
+	if (isset($_POST) && !empty($_POST)) {
+		extract($_POST);
+		
+	}
+ ?>

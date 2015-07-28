@@ -7,7 +7,7 @@
 </nav>
 
 <div class="content">
-
+    
     <div class="head">
         <div class="search">
             <div class="search_form">
@@ -22,8 +22,23 @@
         </div>
     </div>
 
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-    Amet ab aliquid, cupiditate veritatis dolorum earum! Natus, aut. 
-    Hic qui illum rem, iste mollitia, ea assumenda, necessitatibus rerum 
-    labore odit neque.
+    
 </div>
+
+<div class="content-user none">
+    content user
+</div>
+
+<div class="content-camion none">
+    content camion
+</div>
+
+<div class="content-mission none">
+    content camion
+</div>
+
+<script>
+    jQuery(document).ready(function($) {
+        
+    });
+</script>

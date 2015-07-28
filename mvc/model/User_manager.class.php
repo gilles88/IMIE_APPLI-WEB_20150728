@@ -2,6 +2,10 @@
 Class User_manager{
 
 	private $users = array();
+
+	function user_manager($users){
+		$this->users = $users;
+	}
 	
 	function get_nb_user_online(){
 		// return array
@@ -46,7 +50,7 @@ Class User_manager{
 		return $this->users;
 	}
 
-	
+
 
 }
 

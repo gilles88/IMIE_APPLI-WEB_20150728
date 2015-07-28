@@ -1,3 +1,13 @@
+<?php 
+    include 'mvc/controller/User.class.php';
+    include 'mvc/controller/User_manager.class.php';
+    session_start(); 
+    
+    $users = array(); 
+    
+    $manager = new User_manager($users);
+    
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,52 +20,17 @@
 </head>
 <body>
     <div class="site">
-        <nav>
-            <a href="#" data-target="">Utilisateur</a>
-            <a href="#" data-target="">Camions</a>
-            <a href="#" data-target="">Missions</a>
-            <span class="user_connect">Gilles Montmirel</span>
-            <span class="nb_connect">24</span>
-        </nav>
-
-        <div class="content">
-            
-            <div class="head">
-                <div class="search">
-                    <div class="search_form">
-                        <form action="">
-                            <input type="text" class="form-control" placeholder="prénom" name="prenom">
-                            <input type="text" class="form-control" placeholder="nom" name="nom">
-                            <button class="btn btn-primary">Rechercher</button>
-                        </form>
-                    </div>
-                    <a href="#">Add chauffeur</a>
-                    <a href="#">Add gestionnaire</a>                    
-                </div>
-            </div>
-
-            
-        </div>
+        <?php 
+            $session_user = $_SESSION['session_user'];
+            if (isset($session_user) && $session_user != "") {                
+                include("mvc/vue/includes/accueil.php");
+            }else{
+                include("mvc/vue/includes/form_auth.php");
+            }
+         ?>
     </div>
-
-    <div class="content-user none">
-        content user
-    </div>
-
-    <div class="content-camion none">
-        content camion
-    </div>
-    
-    <div class="content-mission none">
-        content camion
-    </div>
-
     <script src="mvc/vue/js/jquery.js"></script>
     <script src="mvc/vue/js/bootstrap.min.js"></script>
-    <script>
-        jQuery(document).ready(function($) {
-            
-        });
-    </script>
+    
 </body>
 </html>
