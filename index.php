@@ -65,7 +65,6 @@
          ?>
     </div>
     <script src="mvc/vue/js/jquery.js"></script>
-    <script src="mvc/vue/js/bootstrap.min.js"></script>
-    
+    <script src="mvc/vue/js/bootstrap.min.js"></script>    
 </body>
 </html>
