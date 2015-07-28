@@ -20,11 +20,16 @@ Class User_manager{
 		//retourne tableau de resultat
 		$result = array();
 		foreach ($this->users as $row) {
-			if ($row->get_nom() == $nom ||
-					$row->get_prenom() == $prenom ||
-					($row->get_nom() == $nom && $row->get_prenom() == $prenom)) {
+			if ($row->get_nom() == $nom  || $row->get_prenom() == $prenom){
+				// print "ok"; die();
 				$result[] = $row;
 			}
+			// if ($row->get_nom() == $nom ||
+			// 		$row->get_prenom() == $prenom ||
+			// 		($row->get_nom() == $nom && $row->get_prenom() == $prenom)) {
+			// 	print "ok"; die();
+			// 	$result[] = $row;
+			// }			
 		}
 		return $result;
 	}

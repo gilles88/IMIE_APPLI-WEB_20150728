@@ -7,7 +7,7 @@
 
     $data_user = array(
         array("nom"=>"Ryan", "prenom"=>"Schneider","email"=>"et.tristique@sociisnatoque.co.uk","password"=>"Nunc"),
-        array("nom"=>"Brock", "prenom"=>"Burton","email"=>"Nam.ligula@et.com","password"=>"feugiat."),
+        array("nom"=>"Ryan", "prenom"=>"Burton","email"=>"Nam.ligula@et.com","password"=>"feugiat."),
         array("nom"=>"Kibo", "prenom"=>"Hatfield","email"=>"ornare@malesuadaut.ca","password"=>"Ut"),
         array("nom"=>"Gary", "prenom"=>"Long","email"=>"lorem@ProinmiAliquam.edu","password"=>"est"),
         array("nom"=>"Eric", "prenom"=>"Montoya","email"=>"luctus.ut.pellentesque@Donec.edu","password"=>"mauris"),
