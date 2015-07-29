@@ -15,6 +15,7 @@ nav span:last-child{border: none}
 .content .search a:last-child{border-right: none;}
 .content .search a:last-child{border-right: none;}
 .content .search input{display: inline; width: 150px}
+.warning{color: orange}
 
 .form-signin{width: 50%; margin: auto}
 .form-signin *{margin: 10px}

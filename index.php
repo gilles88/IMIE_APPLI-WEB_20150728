@@ -11,10 +11,10 @@
         array("nom"=>"Kibo", "prenom"=>"Hatfield","email"=>"ornare@malesuadaut.ca","password"=>"Ut"),
         array("nom"=>"Gary", "prenom"=>"Long","email"=>"lorem@ProinmiAliquam.edu","password"=>"est"),
         array("nom"=>"Eric", "prenom"=>"Montoya","email"=>"luctus.ut.pellentesque@Donec.edu","password"=>"mauris"),
-        array("nom"=>"Lev", "prenom"=>"Nichols","email"=>"Integer.vitae.nibh@elementumsemvitae.co.uk","password"=>"Quisque"),
+        array("nom"=>"Lev", "prenom"=>"Nichols","email"=>"Integer.vitae.nibh@element.co.uk","password"=>"Quisque"),
         array("nom"=>"Hunter", "prenom"=>"Carlson","email"=>"consectetuer@sit.com","password"=>"placerat,"),
         array("nom"=>"Mohammad", "prenom"=>"Cline","email"=>"nulla.Integer@ipsum.ca","password"=>"id"),
-        array("nom"=>"Tanner", "prenom"=>"Clay","email"=>"eget.massa.Suspendisse@ultricesmaurisipsum.org","password"=>"Nam"),
+        array("nom"=>"Tanner", "prenom"=>"Clay","email"=>"eget.massa@ultricesmaurisipsum.org","password"=>"Nam"),
         array("nom"=>"Raja", "prenom"=>"Walter","email"=>"Proin.ultrices@cursus.com","password"=>"felis")
     );
 
@@ -52,6 +52,9 @@
     <title>Gilles - Öner [IMIE-APPLI WEB]</title>
     <link href="mvc/vue/css/bootstrap.min.css" rel="stylesheet">
     <link href="mvc/vue/css/style.css" rel="stylesheet">
+    <script src="mvc/vue/js/jquery-2.1.4.min.js"></script>
+    <script src="mvc/vue/js/bootstrap.min.js"></script>    
+    <script src="mvc/vue/js/script.js"></script>
 </head>
 <body>
     <div class="site">
@@ -63,7 +66,6 @@
             }
          ?>
     </div>
-    <script src="mvc/vue/js/jquery.js"></script>
-    <script src="mvc/vue/js/bootstrap.min.js"></script>    
+    
 </body>
 </html>
